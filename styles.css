@@ -1,0 +1,8 @@
+body {
+  background-color: black;
+}
+
+.text {
+  position: absolute;
+  color: #ccc;
+}
