@@ -13,6 +13,7 @@ text=$1
 for name in "${arr[@]}"
 do
    pushd sounds/
+     rm $name.mp3
      echo "$name"
      echo saving $text in $name
      say -o $name.aif -v $name $text

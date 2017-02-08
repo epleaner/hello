@@ -48,10 +48,22 @@ var names = [
 'Zuzana'
 ];
 
+function printText() {
+  var sp = document.createElement('span');
+  sp.textContent = 'hello its me'
+  sp.className = 'text';
+  sp.style['right'] = Math.floor(Math.random() * window.innerWidth) + 'px'
+  sp.style['top'] = Math.floor(Math.random() * window.innerHeight) + 'px'
+  sp.style['transform'] = 'rotate(' + Math.floor(Math.random() * 360) + 'deg)'
+  sp.style['font-size'] = Math.floor(Math.random() * 100) + 'px'
+  document.body.appendChild(sp);
+}
+
 names.forEach(function(name) {
   var delay = Math.random() * 10000
   setTimeout(function() {
     var audio = new Audio('sounds/' + name + '.mp3');
     audio.play()
+    printText();
   }, delay);
 })
