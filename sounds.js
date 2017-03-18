@@ -50,7 +50,7 @@ var names = [
 
 function printText() {
   var sp = document.createElement('span');
-  sp.textContent = 'hello its me'
+  sp.textContent = 'hello it\'s me'
   sp.className = 'text';
   sp.style['right'] = Math.floor(Math.random() * window.innerWidth) + 'px'
   sp.style['top'] = Math.floor(Math.random() * window.innerHeight) + 'px'
@@ -60,7 +60,7 @@ function printText() {
 }
 
 names.forEach(function(name) {
-  var delay = Math.random() * 10000
+  var delay = Math.random() * 100000
   setTimeout(function() {
     var audio = new Audio('sounds/' + name + '.mp3');
     audio.play()
